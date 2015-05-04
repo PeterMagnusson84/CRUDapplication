@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="contactsdatabaseModelStoreContainer" CdmEntityContainer="contactsdatabaseEntities">
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="contactsdatabaseModel.Contact">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteContact" FunctionName="contactsdatabaseModel.Store.DeleteContact" />
+    <FunctionImportMapping FunctionImportName="GetContacts" FunctionName="contactsdatabaseModel.Store.GetContacts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="contactsdatabaseModel.GetContacts_Result">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertContact" FunctionName="contactsdatabaseModel.Store.InsertContact" />
+    <FunctionImportMapping FunctionImportName="UpdateContact" FunctionName="contactsdatabaseModel.Store.UpdateContact" />
+  </EntityContainerMapping>
+</Mapping>

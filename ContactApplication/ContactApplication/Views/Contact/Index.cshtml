@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ContactApplication.Models.Contact>
+
+<p class="createContact">
+    @Html.ActionLink("Skapa kontakt", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.ActionLink("Redigera", "Edit", new { id=item.ContactID }) |
+            @Html.ActionLink("Uppgifter", "Details", new { id=item.ContactID }) |
+            @Html.ActionLink("Radera", "Delete", new { id=item.ContactID })
+        </td>
+    </tr>
+}
+
+</table>
