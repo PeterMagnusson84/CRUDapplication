@@ -16,18 +16,6 @@ namespace ContactApplication.Controllers
 
         EFRepository _repository = new EFRepository();
 
-        //IRepository _repository;
-
-        //public ContactController()
-        //    : this(new EFRepository())
-        //{
-        //}
-
-        //public ContactController(IRepository repository)
-        //{
-        //    _repository = repository;
-        //}
-
         // GET: Contact
         public ActionResult Index()
         {
