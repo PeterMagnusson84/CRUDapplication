@@ -2,4 +2,4 @@
 
 ASP.NET MVC
 
-contactscrud.azurewebsites.net
+www.contactscrud.azurewebsites.net
