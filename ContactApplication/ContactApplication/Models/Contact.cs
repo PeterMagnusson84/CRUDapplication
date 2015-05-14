@@ -25,6 +25,7 @@ namespace ContactApplication.Models
         public string Lastname { get; set; }
 
         [DisplayName("E-post")]
+        [EmailAddress(ErrorMessage = "Ange en riktigt email adress")]
         public string Email { get; set; }
 
         [DisplayName("Telefonnummer")]
